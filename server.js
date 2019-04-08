@@ -32,6 +32,7 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 app.use(
 	'/graphql',
+	bodyParser.json(),
 	graphqlExpress({
 		schema,
 		context: {
